@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CAPS MAKER BY VUSAL</title>
+	<link rel="stylesheet" type="text/css" href="stylecaps.css">
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var addImage =function(){
+
+			var capsImg=document.getElementsByTagName("input")[0].value;
+			if(capsImg==""){
+				alert("Sekil yoxdur")
+			}else{
+				console.log(capsImg)
+				document.getElementsByClassName("imgFrame")[0].getElementsByTagName("img")[0].src="images/"+capsImg;
+			}
+		}
+
+		function addText(){
+			var capsText=document.getElementsByTagName("input")[1].value;
+			document.getElementsByClassName("capsText")[0].innerHTML="<p>"+capsText+"</p>"
+		}
+
+
+		var capsMaker = document.createElement("div");
+		capsMaker.setAttribute("id", "capsMaker");
+		document.body.appendChild(capsMaker);
+
+			var capsFrame = document.createElement("div");
+			capsFrame.setAttribute("class", "capsFrame");
+			capsMaker.appendChild(capsFrame);
+			
+				var imageFrame = document.createElement("div");
+				imageFrame.setAttribute("class", "imageFrame");
+				capsFrame.appendChild(imageFrame);
+
+					var foto = document.createElement("img");
+					foto.setAttribute("src", "images/01.jpg");
+					imageFrame.appendChild(foto);
+
+					var capsText = document.createElement("div");
+					capsText.setAttribute("class", "capsText");
+					imageFrame.appendChild(capsText);
+
+						var para = document.createElement("p");
+					    var t = document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+					    para.appendChild(t);
+					    capsText.appendChild(para);
+
+			var settingFrame = document.createElement("div");
+			settingFrame.setAttribute("class", "settingFrame");
+			capsMaker.appendChild(settingFrame);
+
+				var capsInput1 = document.createElement("input");
+				capsInput1.setAttribute("type","text");
+				capsInput1.setAttribute("placeholder","Seklinizin linkini bura daxil edin");
+				settingFrame.appendChild(capsInput1);
+				
+				var capsButton1 = document.createElement("button");
+				var a = document.createTextNode("ADD IMAGE");
+				capsButton1.appendChild(a);
+				capsButton1.setAttribute("onclick", "addImage()");
+				settingFrame.appendChild(capsButton1);
+
+				var capsInput2 = document.createElement("input");
+				capsInput2.setAttribute("type","text");
+				capsInput2.setAttribute("placeholder","Caps texti bura elave edin");
+				settingFrame.appendChild(capsInput2);
+
+				var capsButton2 = document.createElement("button");
+				var b = document.createTextNode("ADD TEXT");
+				capsButton2.appendChild(b);
+				capsButton2.setAttribute("onclick", "addText()");
+				settingFrame.appendChild(capsButton2);
+
+	</script>
+			
+</body>
+</html>

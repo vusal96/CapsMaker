@@ -1,0 +1,44 @@
+html,body{
+	margin:0;
+	padding:0;
+}
+#capsMaker{
+	background: gray;
+	width: 900px;
+	margin: 0 auto;
+}
+.capsFrame, .capsText, .settingFrame{
+	width:100%;
+}
+
+.imageFrame img{
+	width:100%;
+}
+.capsText{
+	background:red;
+	color:white;
+	padding:10px;
+	width: 880px;
+	
+}
+.capsText p{
+	margin:0;
+}
+.settingFrame input{
+	padding:10px 20px;
+	width:calc(100% - 42px);
+	border:1px solid red;
+	margin:10px 0px;
+}
+.settingFrame input:focus{
+	background:lightgray;
+	color:black;
+}
+.settingFrame button{
+	cursor:pointer;
+	border:none;
+	background:red;
+	color:white;
+	padding:15px 25px;
+}
+
